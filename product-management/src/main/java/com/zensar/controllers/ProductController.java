@@ -56,8 +56,8 @@ public class ProductController {
 	// http://localhost:8080/api/v1/productapi/2     Delete
 	
 	@DeleteMapping("/products/{productId}")
-	public boolean deleteProduct(@PathVariable("productId") int productId) {
-		return service.deleteProduct(productId);
+	public void deleteProduct(@PathVariable("productId") int productId) {
+		 service.deleteProduct(productId);
 	}
 	
 	
