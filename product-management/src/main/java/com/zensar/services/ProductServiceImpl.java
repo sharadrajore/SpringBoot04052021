@@ -22,7 +22,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	public Product getProduct(int productId) {
-		return repository.findById(productId).get();
+		return repository.findById(productId).get();  // 2.4.5
+		// return repository.findOne(productId);  // 1.5.4.RELEASE
 	}
 
 	public Product insertProduct(Product product) {
@@ -30,7 +31,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	public void deleteProduct(int productId) {
-		repository.deleteById(productId);
+		repository.deleteById(productId);  //2.4.5
+		// repository.delete(productId);   // 1.5.4
 	}
 
 	public Product updateProduct(int productId, Product product) {
